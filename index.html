@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderWorld Travels</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+<h2 class="logo">WanderWorld</h2>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#destinations">Destinations</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<h1>Explore The World</h1>
+<p>Best Travel Experience With Us</p>
+<button class="btn" onclick="openForm()">Book Now</button>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>We provide best travel tours, luxury hotels and unforgettable experiences worldwide.</p>
+</section>
+
+<!-- Destinations -->
+<section class="section" id="destinations">
+<h2>Top Destinations</h2>
+
+<div class="cards">
+<div class="card">Goa</div>
+<div class="card">Dubai</div>
+<div class="card">Paris</div>
+<div class="card">Bali</div>
+</div>
+</section>
+
+<!-- Packages -->
+<section class="section" id="packages">
+<h2>Travel Packages</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Goa Tour</h3>
+<p>₹14,999</p>
+<button class="btn" onclick="openForm()">Book</button>
+</div>
+
+<div class="card">
+<h3>Dubai Tour</h3>
+<p>₹49,999</p>
+<button class="btn" onclick="openForm()">Book</button>
+</div>
+
+<div class="card">
+<h3>Paris Tour</h3>
+<p>₹89,999</p>
+<button class="btn" onclick="openForm()">Book</button>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+<input type="text" placeholder="Your Name" id="name">
+<input type="email" placeholder="Your Email" id="email">
+<textarea placeholder="Message" id="message"></textarea>
+<button type="submit" class="btn">Send</button>
+</form>
+
+<p id="msg"></p>
+
+</section>
+
+<!-- Booking Popup -->
+<div class="popup" id="popupForm">
+
+<div class="popup-content">
+<span class="close" onclick="closeForm()">×</span>
+
+<h2>Book Your Trip</h2>
+
+<form id="bookingForm">
+
+<input type="text" placeholder="Full Name" id="bname">
+<input type="email" placeholder="Email" id="bemail">
+<input type="text" placeholder="Destination" id="bdestination">
+<input type="date" id="bdate">
+
+<button type="submit" class="btn">Submit</button>
+
+</form>
+
+<p id="bookmsg"></p>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 WanderWorld Travels</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
