@@ -80,3 +80,6 @@ msg.innerHTML = "Message Sent Successfully!";
 document.getElementById("contactForm").reset();
 
 });
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("active");
+}

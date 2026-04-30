@@ -234,3 +234,29 @@ padding:8px 15px;
 }
 
 }
+.menu-toggle{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+/* Mobile Navbar */
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+width:100%;
+background:#0d6efd;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
