@@ -1,15 +1,15 @@
+/* Reset */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
+background:#f4f6f9;
 color:#333;
-line-height:1.6;
 }
 
 /* Navbar */
@@ -17,7 +17,7 @@ line-height:1.6;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:15px 30px;
 background:#0d6efd;
 position:sticky;
 top:0;
@@ -26,7 +26,7 @@ z-index:1000;
 
 .logo{
 color:#fff;
-font-size:28px;
+font-size:24px;
 font-weight:bold;
 }
 
@@ -40,50 +40,51 @@ margin-left:20px;
 }
 
 .nav-links a{
-color:white;
+color:#fff;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 transition:0.3s;
 }
 
 .nav-links a:hover{
-color:yellow;
+color:#ffd54f;
 }
 
 /* Hero */
 .hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+min-height:100vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
+color:#fff;
 padding:20px;
 }
 
 .hero h1{
-font-size:60px;
-margin-bottom:20px;
-text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+font-size:48px;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:24px;
-margin-bottom:25px;
+font-size:18px;
+margin-bottom:20px;
 }
 
 /* Button */
 .btn{
 background:#ff9800;
 color:white;
+padding:10px 20px;
 border:none;
-padding:12px 25px;
-font-size:18px;
-border-radius:6px;
+border-radius:5px;
 cursor:pointer;
-transition:0.3s;
+font-size:16px;
 }
 
 .btn:hover{
@@ -92,12 +93,12 @@ background:#e68900;
 
 /* Sections */
 .section{
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
 .section h2{
-font-size:40px;
+font-size:32px;
 margin-bottom:20px;
 color:#0d6efd;
 }
@@ -105,48 +106,40 @@ color:#0d6efd;
 /* Cards */
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:20px;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+gap:20px;
 max-width:1100px;
 margin:auto;
 }
 
 .card{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-5px);
 }
 
-.card h3{
-margin-bottom:10px;
-color:#0d6efd;
-}
-
-/* Form */
+/* Forms */
 form{
-max-width:500px;
+max-width:400px;
 margin:auto;
 }
 
-input,textarea{
+input, textarea{
 width:100%;
-padding:12px;
+padding:10px;
 margin:10px 0;
 border:1px solid #ccc;
 border-radius:5px;
-font-size:16px;
 }
 
 textarea{
-height:120px;
-resize:none;
+height:100px;
 }
 
 /* Popup */
@@ -160,36 +153,23 @@ height:100%;
 background:rgba(0,0,0,0.7);
 justify-content:center;
 align-items:center;
-z-index:2000;
+padding:15px;
 }
 
 .popup-content{
-background:white;
-padding:30px;
+background:#fff;
+padding:20px;
 border-radius:10px;
-width:90%;
-max-width:450px;
+width:100%;
+max-width:400px;
 position:relative;
-text-align:center;
-animation:popup 0.4s ease;
-}
-
-@keyframes popup{
-from{
-transform:scale(0.7);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
 }
 
 .close{
 position:absolute;
+right:15px;
 top:10px;
-right:20px;
-font-size:30px;
+font-size:24px;
 cursor:pointer;
 color:red;
 }
@@ -199,20 +179,23 @@ footer{
 background:#111;
 color:white;
 text-align:center;
-padding:20px;
+padding:15px;
 margin-top:30px;
 }
 
-/* Responsive */
+/* 🔥 RESPONSIVE BREAKPOINTS */
+
+/* Tablet */
 @media(max-width:768px){
 
 .navbar{
 flex-direction:column;
-padding:15px;
+align-items:flex-start;
 }
 
 .nav-links{
 flex-direction:column;
+width:100%;
 margin-top:10px;
 }
 
@@ -221,15 +204,33 @@ margin:10px 0;
 }
 
 .hero h1{
-font-size:38px;
+font-size:32px;
 }
 
 .hero p{
-font-size:18px;
+font-size:16px;
 }
 
 .section h2{
-font-size:30px;
+font-size:26px;
+}
+
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.btn{
+font-size:14px;
+padding:8px 15px;
 }
 
 }
